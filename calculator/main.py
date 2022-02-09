@@ -7,4 +7,7 @@ class Calc:
         return a - b
     
     def div(self, a, b):
-        return a / b
+        try:
+            a / b
+        except ZeroDivisionError():
+            raise ValueError("You can not divide by 0")
